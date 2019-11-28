@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "6abd9fc3-773e-4c50-9038-c522214dfd38",
+		"name": "BudgetApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PostExpenseEntry",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\"5C479D0A-1792-47F1-8F17-53F13B99DC49\",\n\t\"description\":\"test expense 2\",\n\t\"category\":\"travel\",\n\t\"amount\":134.7,\n\t\"createTimeEpoch\":1575006910,\n\t\"updateTimeEpoch\":1575006910\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/expense/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"expense",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetExpenseEntries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/expense?startTimeEpoch=1575006900&endTimeEpoch=1575006920",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"expense"
+					],
+					"query": [
+						{
+							"key": "startTimeEpoch",
+							"value": "1575006900"
+						},
+						{
+							"key": "endTimeEpoch",
+							"value": "1575006920"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
